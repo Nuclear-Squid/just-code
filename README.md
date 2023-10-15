@@ -29,5 +29,3 @@ They will be added before the file names, for instance, if my EDITOR="nvim",
 The `-n` flag prevents the editor from opening the new files.
 
 The `-g` flag creates a new git repo
-
-
