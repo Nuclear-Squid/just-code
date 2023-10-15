@@ -1,0 +1,14 @@
+[package]
+name = "just-code"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+convert_case = "0.6.0"
+git2 = "0.18.1"
+simple-home-dir = { version = "0.2.0", features = ["expand_tilde"] }
+thiserror = "1.0.49"
+toml = "0.8.2"
+tuple-map = "0.4.0"

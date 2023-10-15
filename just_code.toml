@@ -1,0 +1,40 @@
+executable_file_extentions = ["py", "sh"]
+
+sh = """
+#! /bin/sh
+
+echo "-------- Hello World ! --------"
+"""
+
+py = """
+#! /bin/env python3
+\""" $File Name$:
+\"""
+
+
+def main() -> None:
+    \""" The entry point of the programm, isn’t run when used as a module \"""
+    print("-------- Hello World ! --------")
+
+
+if __name__ == "__main__":
+    main()
+"""
+
+c = """
+#include <stdio.h>
+
+int main(int argc, char** argv) {
+    printf("-------- Hello World ! --------\\n");
+
+    return 0;
+}
+"""
+
+h = """
+#ifndef $FILE_NAME$_H
+#define $FILE_NAME$_H
+
+/* $FILE_NAME$_H */
+#endif
+"""
