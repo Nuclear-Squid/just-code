@@ -1,6 +1,10 @@
 just-code: A minimalist helloworld generator
 ============================================
 
+A simple cli tool with a rudementary [neovim integration][#use-it-as-a-neovim-plugin]
+
+# Use it as a cli tool
+
 ```
 usage: just-code [-g|--create-git-repo] [-n|--no-editor] ([re:]file_name)+
                  -- [extra editor args]
@@ -29,3 +33,31 @@ They will be added before the file names, for instance, if my EDITOR="nvim",
 The `-n` flag prevents the editor from opening the new files.
 
 The `-g` flag creates a new git repo
+
+# Use it as a neovim plugin
+
+Import it with your package manager, and configure the mappings :
+
+```lua
+require('packer').startup(function(use)
+    use 'Nuclear-Squid/just-code'  -- Import the plugin
+    -- Configure it : here is the default configuration for the plugin.
+    -- You can use `require('just-code').setup()` to keep the default mappings.
+    require('just-code').setup {
+        mappings = {
+            new_file_horizontal = '<leader>n'
+            new_file_vertical   = '<leader>N'
+        }
+    }
+```
+
+You’ll also need to [install](#install) the rust programm.
+
+# Install
+
+You’ll need the [Rust programming langage](https://www.rust-lang.org/tools/install).
+Once you do, just run this in your terminal and you’re good to go.
+
+```
+cargo install just-code
+```
